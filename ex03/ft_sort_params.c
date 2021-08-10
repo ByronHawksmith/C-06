@@ -23,8 +23,8 @@ void	ft_putstr(char *str)
 
 void	ft_sort_strings(char *arr[], int size)
 {
-	int	i;
-	int	j;
+	int		i;
+	int		j;
 	char	*temp;
 
 	i = 1;
@@ -47,13 +47,14 @@ void	ft_sort_strings(char *arr[], int size)
 
 int	main(int argc, char *argv[])
 {
-	int i;
+	int	i;
 
 	ft_sort_strings(argv, argc);
 	i = 1;
 	while (i < argc)
 	{
 		ft_putstr(argv[i]);
+		write(1, "\n", 1);
 		i++;
 	}
 	return (0);
