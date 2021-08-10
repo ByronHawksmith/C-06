@@ -11,8 +11,14 @@ void	ft_putstr(char *str)
 
 int	main(int argc, char *argv[])
 {
-	if (argc >= 0)
-		ft_putstr(argv[0]);
-	write(1, "\n", 1);
+	int	i;
+
+	i = 1;
+	while (i < argc && *argv[i])
+	{
+		ft_putstr(argv[i]);
+		write(1, "\n", 1);
+		i++;
+	}
 	return (0);
 }
